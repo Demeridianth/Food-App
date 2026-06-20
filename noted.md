@@ -27,6 +27,7 @@ python manage.py migrate --actually creates tables etc. (by default in db.sqlite
 # Admin panel
 python manage.py createsuperuser --login creds creation
 python manage.py runserver --run local
+-- to enter admin panel -- "http://127.0.0.1:8000/admin/"
 
 # View (Endpoint) (Change to DRF?? later)
 Browser → URL → View → Database → View → Response
