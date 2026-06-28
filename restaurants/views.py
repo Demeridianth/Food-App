@@ -11,6 +11,16 @@ def restaurant_list(request):
             "name": r.name,
             "address": r.address,
             "phone": r.phone,
+            "dishes": [
+                {
+                    "id": d.id,
+                    "name": d.name,
+                    "description": d.description,
+                    "price": str(d.price),
+                    "is_available": d.is_available
+                }
+                for d in r.dishes.all()
+            ]
         }
         for r in restaurants
     ]
